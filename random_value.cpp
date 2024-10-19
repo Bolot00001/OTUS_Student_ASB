@@ -11,7 +11,7 @@ int help_random(int &max_value) {
 
 	const int random_value = std::rand() % max_value;
 
-	std::cout << random_value << std::endl;
+	//std::cout << random_value << std::endl;
 
 	return random_value;
 }
