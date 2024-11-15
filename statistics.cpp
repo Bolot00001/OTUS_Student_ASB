@@ -37,7 +37,7 @@ private:
 
 class Max : public IStatistics {
 public:
-	Max() : m_max{ std::numeric_limits<double>::min() } {
+	Max() : m_max{ std::numeric_limits<double>::lowest() } {
 	}
 
 	void update(double next) override {
@@ -134,8 +134,6 @@ int main() {
 	double val = std::numeric_limits<double>::max();
 	
 	while (std::cin >> val) {
-	//while (val != 10) {
-		//std::cin >> val;
 		for (size_t i = 0; i < statistics_count; ++i) {
 			statistics[i]->update(val);
 		}
